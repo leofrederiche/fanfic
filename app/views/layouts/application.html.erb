@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fanfic</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div class="hamburguer">
+		<%= image_tag "menu.png" %>
+	</div>
+
+	<nav>
+		<li>
+			<a href="#" class="link">Historias</a>
+		</li>
+		<li>
+			<a href="#">Escritores</a>
+		</li>
+		<li>
+			<a href="#">Opinião</a>
+		</li>
+	</nav>
+
+	<header>
+	<!-- </header> -->
+
+	<%= yield %>
+
+</body>
+</html>

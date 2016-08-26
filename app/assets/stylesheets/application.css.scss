@@ -1,0 +1,195 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	padding: 3em 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.hamburguer img{
+	width: 3em;
+	display: none;
+}
+
+nav{
+	background-color: #283B4A;
+	position: fixed;
+	display: flex;
+	width: 120%;
+	height: 7em;
+	left: -10%;
+	top: -2em;
+	transform: rotateZ(2deg);
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+	border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+
+nav li{
+	padding: 31% 20px;
+	position: relative;
+	top: 10px;
+	color: white;
+	list-style: none;
+}
+
+nav li:hover{
+	background-color: #384B5A;
+}
+
+nav li a{
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	transform: rotateZ(-2deg);
+	position: relative;
+	padding: 0 20px;
+}
+
+header{
+	background-image: image-url("bg-tree.jpg");
+	background-size: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 76%;
+	height: 40vh;
+	padding: 9em 12%;
+}
+
+.f-header{
+	position: fixed;
+	z-index: 8;
+	top: -300px;
+
+}
+
+.title{
+	color: #fff;
+	text-shadow: 0 0 10px #000;
+	font-size: 4em;
+}
+
+.sub-title{
+	color: #fff;
+	text-shadow: 0 0 10px #000;
+	font-size: 2em;
+}
+
+section{
+	background-color: rgba(40,59,74,1);
+	color: #fff;
+	width: 76%;
+	position: relative;
+	padding: 6em 12%;
+	height: 1500px;
+	margin-top: -10;
+	top: 0;
+}
+
+.f-section{
+	top: 570px;
+}
+
+.container-history{
+	border-bottom: 1px solid rgba(255,255,255,0.8);
+	margin-bottom: 100px;
+}
+
+.icon-ground{
+	background-color: #ddd;
+	transform: rotate3d(1,0,1, 60deg);
+	transform-style: preserve-3d;
+	width: 90px;
+	height: 100px;
+}
+
+.icon{
+	height: 100px;
+	width: auto;
+	position: relative;
+	top: -135px;
+	left: 15px;
+}
+
+.context{
+	position: relative;
+	float: right;
+	width: 80%;
+	top: -100px;
+}
+
+@media (max-width: 1000px){
+
+	header{
+		background-position: center;
+		background-size: auto 100%;
+	}
+
+	.hamburguer{
+		background-color: #283B4A;
+		position: fixed;
+		display: flex;
+		width: 120%;
+		height: 7em;
+		left: -10%;
+		top: -2em;
+		transform: rotateZ(2deg);
+		justify-content: center;
+		align-items: center;
+		z-index: 10;
+	}
+
+	.hamburguer img{
+		display: block;
+		filter: invert(100%);
+		position: relative;
+		top: 1em;
+		transform: rotateZ(-2deg);
+	}
+
+	nav{
+		flex-direction: column;	
+		display: none;
+		width: 120%;
+		height: auto;
+		transform: rotateZ(2deg);
+		top: 4em;
+		left: -10%;
+		padding-bottom: 0.5em;
+	}
+
+	nav li{
+		padding: 10px 20px;
+	}
+
+	nav li a{
+		transform: rotate(-2deg);
+		text-align: center;
+	}
+
+	.context{
+		width: 60%;
+	}
+}
